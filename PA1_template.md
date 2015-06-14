@@ -226,13 +226,6 @@ for (i in 1:length(weekdays)){
         weekdays[i] <- NA
     }   
 }
-```
-
-```
-## Error in if (weekdays[i] == "Monday" | weekdays[i] == "Tuesday" | weekdays[i] == : missing value where TRUE/FALSE needed
-```
-
-```r
 newData <- cbind(newData, weekdays)
 ```
 
@@ -254,22 +247,10 @@ plot <- xyplot(Steps~Interval|Weekday,
                type = "l",
                main = "Activity Patterns Between Weekdays and Weekends",
                xlab = "5-minute interval")
-```
-
-```
-## Error in limits.and.aspect(default.prepanel, prepanel = prepanel, have.xlim = have.xlim, : need at least one panel
-```
-
-```r
 print(plot)
 ```
 
-```
-## function (x, y, ...) 
-## UseMethod("plot")
-## <bytecode: 0x1021dc668>
-## <environment: namespace:graphics>
-```
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png) 
 
 It is evident that there are differences between the average 
 weekday and weekend activity. There is a clear spike of activity in the morning 
